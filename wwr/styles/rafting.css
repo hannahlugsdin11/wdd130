@@ -12,6 +12,8 @@
 header {
    margin: 1rem auto;
     display: grid;
+    text-align: center;
+    justify-content:center;
    grid-template-columns: auto auto;
    grid-template-rows: auto;
    border-top: 1px solid #219EBC;
@@ -22,7 +24,6 @@ header {
    max-width: 1000px;
    max-height: fit-content;
    padding: 20px;
-   text-align: center;
 }
 
 .logo img {
@@ -34,13 +35,14 @@ header {
 h1 {
     font-size: 2rem;
     font-family: Acme, Arial, sans-serif;
+    color: white;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
+    justify-content:center;
+    align-items:center;
+    gap: 10px;
 }
 
 nav a {
@@ -50,17 +52,115 @@ nav a {
     padding: 10px 20px;
     border: 1px solid transparent;
     transition: all 0.3s ease;
-    background-color: #ccc;
+    background-color: white;
 }
 
 .hero {
-    background-color: #fff;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 1000px;
-    border: 1px solid #ccc;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+.hero-content {
+    position: relative;
+    text-align: center;
+}
+.newsletter {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
 }
 
+.newsletter h2 {
+    margin-bottom: 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #219EBC;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #219EBC;
+}
+.cta {
+    padding: 50px;
+    background-color: #219EBC;
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display:inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #219EBC;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #219EBC;
+    color: white;
+}
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.grid-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-content h3 {
+    margin-bottom: 10px;
+}
 .section h1 {
     text-align: center;
     margin-bottom: 15px;
@@ -130,8 +230,75 @@ figcaption {
     font-size: 20px;
     color: #333;
     padding: 3px;
-    
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.cta {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta a {
+    background-color: white;
+    color: #333;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.trips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.trip {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 1rem);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trip img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.trip-details {
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+@media (max-width: 768px) {
+    .trips {
+        flex-direction: column;
+    }
+
+    .trip {
+        flex: 1 1 100%;
+    }
 }
 footer {
     padding: 20px;
